@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.highlight-link {
+  position: relative;
+  display: inline-block;
+}
+
+.highlight-link::before {
+  content: "";
+  position: absolute;
+  left: -2px;
+  right: -2px;
+  bottom: 0;
+  height: 50%;
+  background-color: #1da1f2;
+  opacity: 0.1;
+  z-index: -1;
+  transition: all 0.2s ease;
+}
+
+.highlight-link:hover::before {
+  height: 100%;
+  opacity: 1;
+}
+
+.prose a {
+  position: relative;
+  text-decoration: none !important;
+  color: #000000 !important;
+}
+
+.prose a::before {
+  content: "";
+  position: absolute;
+  left: -2px;
+  right: -2px;
+  bottom: 0;
+  height: 50%;
+  background-color: #1da1f2;
+  opacity: 0.1;
+  z-index: -1;
+  transition: all 0.2s ease;
+}
+
+.prose a:hover::before {
+  height: 100%;
+  opacity: 1;
+}
+
+.divider {
+  width: 50%;
+  height: 1px;
+  background-color: #000000;
+  margin: 2.5rem auto;
+}
+
