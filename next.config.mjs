@@ -21,7 +21,10 @@ const nextConfig = {
     parallelServerBuildTraces: true,
     parallelServerCompiles: true,
   },
-}
+  // Add these lines for GitHub Pages compatibility:
+  output: 'export',
+  assetPrefix: './',
+};
 
 mergeConfig(nextConfig, userConfig)
 
